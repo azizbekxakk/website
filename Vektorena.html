@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Vektorena</title>
+    <style>
+.tugma{
+    background: chartreuse;
+    width: 200px;
+    height: 45px;
+}
+body{
+    background: blue;
+}
+p{
+    color: lawngreen;
+}
+    </style><script>
+function ball(testga)
+{   var hisob=0;
+ if(testga.a1[3].checked){hisob++;}
+ if(testga.a2[0].checked){hisob++;}
+ if(testga.a2[2].checked){hisob++;}
+ if(testga.a2[1].checked){hisob--;}
+ if(testga.a2[1].checked){hisob--;}
+ if(testga.a3[1].checked){hisob--;}
+ if(testga.a3[1].checked){hisob--;}
+ if(testga.a3[1].checked){hisob--;}
+ if(testga.a3[1].checked){hisob--;}
+  if(hisob>=6)              {alert("Balingiz 6 😄");} else
+  if(hisob>=5 && hisob<6)   {alert("Balingiz 5 🤣");} else
+  if(hisob>=4 && hisob<5)   {alert("Balingiz 4 😉");} else
+  if(hisob>=3 && hisob<4)   {alert("Balingiz 3 😐");} else
+  if(hisob>=2 && hisob<3)   {alert("Balingiz 2 🙄");} else
+  if(hisob<2 && hisob>1)    {alert("Balingiz 1 😫");} else
+  if(hisob<1)               {alert("Balingiz 0 😡");}
+  }
+    </script></head>
+    
+    
+    <body>
+        <form action="Wektorena" method="POST" name="testga">
+            <b><font color="red">1.<u>HTML</u>-bu</font></b>
+             <p style="margin-left: 50;"><input type="radio" name="a1" value="1" checked="checked">Dasturlash tili<br>
+             <input type="radio" name="a1" value="2">So'zlashuv tili<br>
+             <input type="radio" name="a1" value="3">Chet tili<br>
+             <input type="radio" name="a1" value="4">Markerlash tili</p><br>
+             <hr>
+            <b><font color="red">2.HTML buyruqlari...deb ataladi.</font></b>
+             <p style="margin-left: 100;"><input type="checkbox" name="a2" value="1" checked="checked">Deskriptorlar<br>
+                <input type="checkbox" name="a2" value="2" checked="checked">Operatorlar<br>
+                <input type="checkbox" name="a2" value="3" checked="checked">Teglar<br>
+                <input type="checkbox" name="a2" value="4" checked="checked">Funksiyalar<br></p>
+             <hr>
+            <b><font color="red">1.Web sahifa tayyorlash uchun...foydalanish mumkin.</font></b>
+            <p style="margin-left: 75;"><input type="checkbox" name="a3" value="1" checked="checked">HTML tilidan<br>
+                <input type="checkbox" name="a3" value="2" checked="checked">FrontPage dasturidan<br>
+                <input type="checkbox" name="a3" value="3" checked="checked">Paint dasturidan<br>
+                <input type="checkbox" name="a3" value="4" checked="checked">Ms Word dasturidan</p>
+             <hr>
+             <center><input class="tugma" type="button" onclick="ball(this.form)" value="NATIJANI KO'RISH✅"></center>
+             <input type="reset" value="Tozalash 🗑">
+    <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</form></body></html>
